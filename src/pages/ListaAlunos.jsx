@@ -29,6 +29,7 @@ function ListaAlunos(){
     return(
         <div>
             <h1>Alunos</h1>
+            <Link to={"/criarAluno"}>Novo Aluno</Link>
             <ul>
                 {alunos.map((aluno)=>(
                     <li 
@@ -36,7 +37,6 @@ function ListaAlunos(){
                     <button onClick={()=>handleExcluir(aluno.id)}>Excluir</button>
                     <Link to={`/editar/${aluno.id}`}>Editar</Link>
                     </li>
-
                 ))}
             </ul>
         </div>
