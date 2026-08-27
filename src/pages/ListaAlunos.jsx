@@ -81,6 +81,16 @@ function ListaAlunos() {
                                 >
                                     Editar
                                 </Link>
+                                
+                                <Link
+                                 to={`/alunos/${aluno.id}/treino`}
+                                 className="bg-neutral-800 text-white font-bold uppercase px-3 py-1.5 rounded text-xs
+                                  hover:bg-red-dark transition-colors duration-300"
+                                >
+                                    Treino
+                                </Link>
+
+                                
                                 <button
                                     onClick={() => handleExcluir(aluno.id)}
                                     className="bg-red-primary text-white font-bold uppercase px-3 py-1.5 rounded text-xs
