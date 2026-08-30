@@ -18,3 +18,18 @@ export async function adicionarExercicioAoTreino(treinoId,exercicioId,dados) {
     return reposta.data
 }
 
+export async function listarTreinosPorAluno(alunoId){
+    const reposta = await api.get(`/treinos/aluno/${alunoId}`)
+    return reposta.data
+}
+
+export async function excluirTreino(id) {
+    const reposta = await api.delete(`/treinos/${id}`)
+    return reposta.data
+}
+
+export async function listarItensTreino(treinoId){
+    const reposta = await api.get(`/treinos/${treinoId}/exercicios`)
+    return reposta.data
+}
+
